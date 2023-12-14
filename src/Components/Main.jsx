@@ -1,6 +1,13 @@
+import HeroSection from "./HeroSection";
+import MenuSection from "./MenuSection";
 
 function Main(){
-    return <main></main>
+    return (
+        <main>
+            <HeroSection />
+            <MenuSection />
+        </main>
+    );
 }
 
 export default Main;

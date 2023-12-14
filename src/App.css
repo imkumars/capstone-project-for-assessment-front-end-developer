@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+/* font-family: 'Karla', sans-serif;
+font-family: 'Markazi Text', serif;
+
+64 pt = 85.33px 5.3331rem
+40pt = 53.33px  3.3331rem
+20 pt = 26.67px  1.6669rem
+18 pt = 24px  1.5rem
+16pt = 21.33px 1.3331rem
+
+*/
+
+:root {
+  --heading-font-family: 'Markazi Text', serif;
+  --general-font-family: 'Karla', sans-serif;
+  --primary-color-green: #495e57;
+  --primary-color-yellow: #f4ce14;
+  --secondary-color-orange-dark: #ee9972;
+  --secondary-color-orange-light: #fbdabb;
+  --secondary-color-gray: #edefee;
+  --secondary-color-black: #333333;
+  --border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: var(--general-font-family);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  width: 65vw;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.title-subtitle-font-family {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+}
+
+.position-rel {
+  position: relative;
+}
+
+.rounded-border-radius {
+  border-radius: var(--border-radius);
+}
+
+/* Navbar-styles */
+.nav-bar {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 2.5rem;
+
+  padding: 2.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-bar ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.nav-bar a {
+  color: var(--secondary-color-black);
+  font-size: calc(0.8rem + 0.2vw);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  border-bottom: 0.2rem solid var(--primary-color-yellow);
+}
+
+@media  screen and (width < 500px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
   }
 }
+
+/* Hero section */
+
+.hero-section {
+  background-color: var(--primary-color-green);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.hero-display-title {
+  font-size: calc(2.5rem + 2vw);
+  color: var(--primary-color-yellow);
+}
+
+.hero-display-sub-title {
+  font-size: calc(1.2rem + 1vw);
+  color: #fff;
+  margin-top: -0.7em;
+  margin-bottom: 0.7rem;
+}
+
+.hero-description {
+  color: #fff;
+  font-weight: 400;
+  width: 25%;
+  margin-bottom: 0.5rem;
+}
+
+.reserve-table-btn {
+  background-color: var(--primary-color-yellow);
+  border: none;
+  color: var(--secondary-color-black);
+  padding: 0.6rem;
+  font-family: var(--general-font-family);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 10px 10px 12px -5px var(--secondary-color-black);
+}
+
+.reserve-table-btn:hover {
+  box-shadow: inset -1px 1px 12px -5px var(--secondary-color-black);
+}
+
+.hero-fig {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.hero-fig img {
+  width: 300px;
+  height: 350px;
+  vertical-align: bottom;   /* [to get rid of small spacing below image](https://stackoverflow.com/questions/12182617/html5-figure-margin-padding) */
+}
+
