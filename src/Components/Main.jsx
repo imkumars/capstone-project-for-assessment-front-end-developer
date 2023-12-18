@@ -1,11 +1,17 @@
-import HeroSection from "./HeroSection";
-import MenuSection from "./MenuSection";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/Home_Page/HomePage";
+import AboutPage from "./Pages/About_Page/About";
+import ReservationPage from "./Pages/Reservation_Page/Reservation";
 
 function Main(){
     return (
         <main>
-            <HeroSection />
-            <MenuSection />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/reservations" element={<ReservationPage />} />
+            </Routes>
+
         </main>
     );
 }

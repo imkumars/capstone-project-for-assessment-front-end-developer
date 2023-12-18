@@ -21,67 +21,80 @@ font-family: 'Markazi Text', serif;
   --border-radius: 10px;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: var(--general-font-family);
-}
-
-.wrapper {
-  width: 65vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .title-subtitle-font-family {
   font-family: var(--heading-font-family);
   font-weight: 400;
 }
 
-.position-rel {
-  position: relative;
+.primary-btn {
+  background-color: var(--primary-color-yellow);
+  border: none;
+  color: var(--secondary-color-black);
+  padding: 0.8rem 1.2rem;
+  font-family: var(--general-font-family);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 10px 10px 12px -5px var(--secondary-color-black);
+}
+
+.primary-btn:hover {
+  box-shadow: inset -1px 1px 12px -5px var(--secondary-color-black);
 }
 
 .rounded-border-radius {
   border-radius: var(--border-radius);
 }
 
-/* Navbar-styles */
-.nav-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-
-  padding: 2.5rem;
+.container {
+  width: 65vw;
 }
 
-.nav-bar ul {
+/* General styles */
+header, main, footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+main {
+  flex-direction: column;
+}
+
+header > :first-child, footer > :first-child {
+  padding: 2rem 0;
+
+  width: 65vw;
+}
+
+nav a, footer a {
+  text-decoration: none;
+}
+
+nav ul, footer ul {
   list-style-type: none;
+}
+
+/* Navbar-styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
   display: grid;
   grid-template-columns: repeat(6, max-content);
   gap: 2rem;
 }
 
-.nav-bar a {
+nav a {
   color: var(--secondary-color-black);
   font-size: calc(0.8rem + 0.2vw);
   font-weight: 800;
-  text-decoration: none;
 }
 
-.nav-bar a:hover {
+nav a:hover {
   border-bottom: 0.2rem solid var(--primary-color-yellow);
-}
-
-@media  screen and (width < 500px) {
-  .nav-bar {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 2rem;
-  }
 }
 
 /* Hero section */
@@ -91,6 +104,17 @@ font-family: 'Markazi Text', serif;
   display: flex;
   justify-content: center;
   padding: 2rem 0;
+
+  margin-bottom: 2rem;
+}
+
+.hero-section > div {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+.hero-section > div > section {
+  display: grid;
 }
 
 .hero-display-title {
@@ -100,43 +124,160 @@ font-family: 'Markazi Text', serif;
 
 .hero-display-sub-title {
   font-size: calc(1.2rem + 1vw);
-  color: #fff;
+  color: var(--secondary-color-gray);
   margin-top: -0.7em;
   margin-bottom: 0.7rem;
 }
 
 .hero-description {
-  color: #fff;
+  color: var(--secondary-color-gray);
   font-weight: 400;
-  width: 25%;
+  width: 37%;
   margin-bottom: 0.5rem;
 }
 
-.reserve-table-btn {
-  background-color: var(--primary-color-yellow);
-  border: none;
-  color: var(--secondary-color-black);
-  padding: 0.6rem;
-  font-family: var(--general-font-family);
-  font-weight: 800;
-  cursor: pointer;
-  box-shadow: 10px 10px 12px -5px var(--secondary-color-black);
-}
-
-.reserve-table-btn:hover {
-  box-shadow: inset -1px 1px 12px -5px var(--secondary-color-black);
-}
-
 .hero-fig {
-  position: absolute;
-  top: 0;
-  right: 0;
+  width: 18.7rem;
+  height: 21.8rem;
+  margin-bottom: -4rem;
   overflow: hidden;
 }
 
 .hero-fig img {
-  width: 300px;
-  height: 350px;
-  vertical-align: bottom;   /* [to get rid of small spacing below image](https://stackoverflow.com/questions/12182617/html5-figure-margin-padding) */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* vertical-align: bottom;    [to get rid of small spacing below image](https://stackoverflow.com/questions/12182617/html5-figure-margin-padding) */
 }
 
+
+/* Menu section */
+.menu-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+
+  row-gap: 1rem;
+}
+
+.menu-section section {
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+
+  flex-wrap: wrap;
+}
+
+.menu-section :first-child {
+  align-items: center;
+}
+
+.menu-section h1 {
+  font-size: calc(2.5rem + 2vw);
+}
+
+.special-menu-card {
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+  background-color: var(--secondary-color-gray);
+
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  width: 20vw;
+  /* height: 25vw; */
+
+  /* height: 100%; */
+
+  display: grid;
+  grid-template-rows: 10rem 1fr;
+  flex: 0 0 20vw;
+  min-width: 14rem;
+
+}
+
+.special-menu-card > figure {
+  width: 100%;
+  /* height: 12.5rem; */
+
+  height: 100%;
+}
+
+.special-menu-card > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.special-menu-card > article{
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  color: var(--secondary-color-black);
+
+  row-gap: 1.5rem;
+
+}
+
+article[class="dish-name-price"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--heading-font-family);
+}
+
+article[class="dish-name-price"] :nth-child(2) {
+  color: var(--secondary-color-orange-dark);
+  font-family: var(--general-font-family);
+  font-weight: 500;
+}
+
+.special-menu-card > article > :nth-child(2) {
+  color: var(--primary-color-green);
+
+  height: 40%;
+  min-height: 30%;
+}
+
+.special-menu-card > article > :last-child {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  margin-top: auto; /* trick to make last-child stick to bottom which is available with flexbox */
+}
+
+
+/* Footer */
+
+footer {
+  background-color: var(--primary-color-green);
+  color: var(--secondary-color-gray);
+  display: flex;
+  justify-content: center;
+
+  padding: 2.5rem 0;
+}
+
+/* footer a,li {
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--secondary-color-gray);
+} */
+
+.footer-heading {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+footer > div > div {
+  padding: 0.5rem;
+}
