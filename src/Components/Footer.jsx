@@ -5,7 +5,7 @@ import NavLinks from "./Utility/NavLinks";
 function Footer(){
     return (
         <footer>
-            <div className="wrapper flex-wrap">
+            <div className="container">
                 <div className="footer-logo">
                     <img src={FooterImg} alt="Little Lemon Footer logo"/>
                 </div>
@@ -15,10 +15,16 @@ function Footer(){
                 </div>
                 <div className="footer-contact">
                     <h3 className="footer-heading">CONTACT US</h3>
+                    <address>
+                        Little Lemon <br />
+                        123 E Fictional Address Mt Ave<br />
+                        Chicago, IL 40440 <br />
+                        USA
+                    </address>
                 </div>
-                <div className="fotter-social-connect">
+                <div className="footer-social-connect">
                     <h3 className="footer-heading">CONNECT WITH US</h3>
-                    <div className="social-icons">
+                    <address className="social-icons">
                         <Link to="https://www.facebook.com/">
                             <i className="bi bi-facebook"></i>
                         </Link>
@@ -28,7 +34,7 @@ function Footer(){
                         <Link to="http://www.twitter.com/">
                             <i className="bi bi-twitter-x"></i>
                         </Link>
-                    </div>
+                    </address>
 
                 </div>
             </div>

@@ -367,16 +367,15 @@ article[class="dish-name-price"] :nth-child(2) {
   margin-bottom: 0.7rem;
 }
 
+.about-section > div p{
+  width: 80%;
+}
+
 .about-section figure{
   /* width: 50%; */
   height: 21.8rem;
   position: relative;
 }
-
-/* .about-section figure::after {
-  content: url(./assets/restauranfood.jpg);
-  position: relative;
-} */
 
 .about-section figure > img{
   width: 60%;
@@ -406,11 +405,20 @@ footer {
   padding: 2.5rem 0;
 }
 
-/* footer a,li {
-  list-style-type: none;
-  text-decoration: none;
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+}
+
+footer a {
   color: var(--secondary-color-gray);
-} */
+}
+
+footer li+li {
+  margin-top: 0.6rem;
+}
 
 .footer-heading {
   margin-bottom: 0.5rem;
