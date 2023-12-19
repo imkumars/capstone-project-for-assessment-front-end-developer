@@ -340,6 +340,61 @@ article[class="dish-name-price"] :nth-child(2) {
   font-size: 0.6rem;
 }
 
+/* About section */
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  color: var(--primary-color-green);
+
+  margin: 3rem 0;
+}
+
+.about-section > div {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.about-section h1{
+  color: var(--primary-color-yellow);
+  font-size: calc(2.5rem + 2vw);
+}
+
+.about-section h3 {
+  font-size: calc(1.2rem + 1vw);
+  margin-top: -0.7em;
+  margin-bottom: 0.7rem;
+}
+
+.about-section figure{
+  /* width: 50%; */
+  height: 21.8rem;
+  position: relative;
+}
+
+/* .about-section figure::after {
+  content: url(./assets/restauranfood.jpg);
+  position: relative;
+} */
+
+.about-section figure > img{
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+
+  margin-bottom: -2rem;
+}
+
+.about-section figure > :nth-child(2) {
+  position: absolute;
+  right: 0;
+  margin-top: -2rem;
+}
+
+
+
 /* Footer */
 
 footer {
