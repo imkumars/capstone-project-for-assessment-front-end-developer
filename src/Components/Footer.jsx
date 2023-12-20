@@ -18,7 +18,7 @@ function Footer(){
                     <address>
                         Little Lemon <br />
                         123 E Fictional Address Mt Ave<br />
-                        Chicago, IL 40440 <br />
+                        Chicago, IL 404XX <br />
                         USA
                     </address>
                 </div>
