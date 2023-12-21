@@ -2,13 +2,14 @@
 import React, {useState, useEffect} from "react";
 
 
+
 const formStyles = {
     display: "grid",
     maxWidth: "200px",
     gap: "20px"
 }
 
-function BookingForm({availableTimes, dispatchMethod}){
+function BookingForm({availableTimes, dispatchMethod, submitFromFunction}){
 
 
     // Initial form data
@@ -42,12 +43,22 @@ function BookingForm({availableTimes, dispatchMethod}){
 
     }
 
+
+
+    //Handle form submittion
+    const handleFormSubmit = (e) =>{
+        e.preventDefault();
+        console.log("form submitted");
+
+        submitFromFunction(formData);
+    }
+
     const availableTimeSlot = availableTimes.map((eachSlot, index) => {
         return <option key={index}>{eachSlot}</option>
     });
 
     return (
-        <form style={formStyles}>
+        <form style={formStyles} onSubmit={handleFormSubmit}>
             <label htmlFor="res-date">Choose date</label>
             <input type="date" id="res-date" value={formData.resDate} onChange={handleFormDataChange} name="resDate" aria-label="Select date to reserve a table" />
             <label htmlFor="res-time">Choose time</label>

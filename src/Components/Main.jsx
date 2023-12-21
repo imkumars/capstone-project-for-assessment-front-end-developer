@@ -4,6 +4,7 @@ import AboutPage from "./Pages/About_Page/About";
 //import ReservationPage from "./Pages/Reservation_Page/Reservation";
 
 import BookingPage from "./Pages/Booking_Page/BookingPage";
+import ConfirmBooking from "./Pages/Booking_Page/ConfirmedBooking";
 
 
 function Main(){
@@ -15,6 +16,7 @@ function Main(){
                 {/* <Route path="/reservations" element={<ReservationPage />} /> */}
 
                 <Route path="/reservations" element={<BookingPage />} />
+                <Route path="/booking-confirmation" element={<ConfirmBooking />}/>
             </Routes>
 
         </main>
