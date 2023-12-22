@@ -41,6 +41,25 @@ font-family: 'Markazi Text', serif;
   box-shadow: inset -1px 1px 12px -5px var(--secondary-color-black);
 }
 
+.primary-btn:active {
+  background-color: var(--primary-color-green);
+  color: var(--secondary-color-gray);
+  outline: 2px solid var(--primary-color-yellow);
+}
+
+.primary-btn:focus {
+  outline: 3px solid var(--primary-color-green);
+  box-shadow: inset -1px 1px 12px -5px var(--secondary-color-black);
+}
+
+.primary-btn:disabled {
+  background-color: var(--secondary-color-orange-dark);
+  color: var(--secondary-color-black);
+  opacity: 0.7;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
 .rounded-border-radius {
   border-radius: var(--border-radius);
 }
@@ -441,4 +460,27 @@ footer > div > div {
   justify-content: center;
   margin: 2rem 0;
   padding: 2rem 0;
+}
+
+.form-error-msg {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.display-none {
+  display: none;
+}
+
+form input[type="number"],input[type="date"],select {
+  font-family: var(--general-font-family);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color-green);
+  color: var(--secondary-color-black);
+}
+
+form input[type="number"]:focus ,input[type="date"]:focus, select:focus{
+  outline: 1px solid var(--primary-color-yellow);
+  border: 2px solid var(--primary-color-yellow);
 }

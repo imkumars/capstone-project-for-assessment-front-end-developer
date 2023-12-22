@@ -2,7 +2,6 @@
 import React, {useState, useEffect} from "react";
 
 
-
 const formStyles = {
     display: "grid",
     maxWidth: "200px",

@@ -63,3 +63,17 @@ test("check select options", () => {
   expect(selectElementOccasion).toHaveDisplayValue("Birthday");
   expect(selectElementChooseTime).toHaveDisplayValue(availableTimes[0]);
 });
+
+//Test when select option for Occasion are changed
+test("verify select option for occasion", () => {
+  render(<BookingForm availableTimes={availableTimes} dispatchMethod={dispatchMethod} submitFromFunction={submitFromFunction} />);
+  const selectElementOccasion = screen.getByLabelText(/Occasion/);
+
+  fireEvent.change(selectElementOccasion, {target: {value: "Birthday"}});
+  expect(selectElementOccasion.value).toBe("Birthday");
+  expect(selectElementOccasion).toHaveDisplayValue("Birthday");
+
+  fireEvent.change(selectElementOccasion, {target: {value: "Anniversary"}});
+  expect(selectElementOccasion.value).toBe("Anniversary");
+  expect(selectElementOccasion).toHaveDisplayValue("Anniversary");
+});

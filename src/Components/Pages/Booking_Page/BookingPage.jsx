@@ -1,6 +1,7 @@
 import React, {useReducer} from "react";
 
-import BookingForm from "./BookingForm";
+//import BookingForm from "./BookingForm";
+import BookingForm from "./BookingFormUsingFormik";
 
 //import { fetchAPI, submitAPI  } from "../../../mock_api/mock_api1";
 import fakeAPI from "../../../mock_api/mock_api2";
