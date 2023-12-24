@@ -1,3 +1,5 @@
+import React from "react";
+
 import TestimonialsCard from "../../Utility/TestimonialsCard";
 import customerTestimonials from "../../../data/customers-testimonials";
 import AlexImg from "../../../assets/customer-img/Alex-img-original_creator_Amir-Seilsepour_unsplash.jpg";

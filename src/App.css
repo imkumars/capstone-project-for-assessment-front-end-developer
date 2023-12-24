@@ -1,25 +1,4 @@
-/* font-family: 'Karla', sans-serif;
-font-family: 'Markazi Text', serif;
 
-64 pt = 85.33px 5.3331rem
-40pt = 53.33px  3.3331rem
-20 pt = 26.67px  1.6669rem
-18 pt = 24px  1.5rem
-16pt = 21.33px 1.3331rem
-
-*/
-
-/* :root {
-  --heading-font-family: 'Markazi Text', serif;
-  --general-font-family: 'Karla', sans-serif;
-  --primary-color-green: #495e57;
-  --primary-color-yellow: #f4ce14;
-  --secondary-color-orange-dark: #ee9972;
-  --secondary-color-orange-light: #fbdabb;
-  --secondary-color-gray: #edefee;
-  --secondary-color-black: #333333;
-  --border-radius: 10px;
-} */
 
 .title-subtitle-font-family {
   font-family: var(--heading-font-family);
@@ -90,7 +69,6 @@ main {
 header > :first-child, footer > :first-child {
   padding: 2rem 0;
 
-  /* width: 65vw; */
 }
 
 nav a, footer a {
@@ -115,7 +93,6 @@ nav {
   flex-wrap: wrap;
   column-gap: 2rem;
   row-gap: 2rem;
-  /* flex-direction: column; */
 }
 
 nav ul {
@@ -172,8 +149,6 @@ nav a:not(.active):hover {
 }
 
 
-
-
 /* Hero section */
 
 .hero-section {
@@ -217,9 +192,7 @@ nav a:not(.active):hover {
 }
 
 .hero-fig {
-  /* width: 18.7rem; */
-  /* height: 21.8rem; */
-  
+
   margin-bottom: -4rem;
   overflow: hidden;
 
@@ -264,10 +237,8 @@ nav a:not(.active):hover {
 }
 
 .menu-section section {
-  /* width: 65vw; */
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 
   flex-wrap: wrap;
   row-gap: 2rem;
@@ -282,17 +253,11 @@ nav a:not(.active):hover {
 }
 
 .special-menu-card {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
   background-color: var(--secondary-color-gray);
 
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   width: 20vw;
-  /* height: 25vw; */
-
-  /* height: 100%; */
 
   display: grid;
   grid-template-rows: 10rem 1fr;
@@ -303,7 +268,6 @@ nav a:not(.active):hover {
 
 .special-menu-card > figure {
   width: 100%;
-  /* height: 12.5rem; */
 
   height: 100%;
 }
@@ -340,8 +304,6 @@ article[class="dish-name-price"] :nth-child(2) {
 .special-menu-card > article > :nth-child(2) {
   color: var(--primary-color-green);
 
-  /* height: 40%;
-  min-height: 30%; */
 }
 
 .special-menu-card > article > :last-child {
@@ -415,14 +377,6 @@ article[class="dish-name-price"] :nth-child(2) {
   row-gap: 0.6rem;
 }
 
-/* .testimonials-card > article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 1.5rem;
-} */
-
 .testimonials-card > section {
   display: flex;
   justify-content: flex-start;
@@ -431,11 +385,6 @@ article[class="dish-name-price"] :nth-child(2) {
   column-gap: 0.5rem;
 }
 
-/* .testimonials-card .bi-person-fill {
-  font-size: 4rem;
-  color: var(--secondary-color-black);
-}
-*/
 
 .testimonials-card figure {
   width: 50px;
@@ -503,7 +452,6 @@ article[class="dish-name-price"] :nth-child(2) {
 }
 
 .about-section figure{
-  /* width: 50%; */
   height: 21.8rem;
   position: relative;
 }
@@ -596,7 +544,8 @@ footer > div > div {
   display: none;
 }
 
-form input[type="number"],input[type="date"],select {
+
+form input:not(input[type="submit"]),select{
   font-family: var(--general-font-family);
   font-size: 0.9rem;
   padding: 0.5rem;
@@ -605,7 +554,25 @@ form input[type="number"],input[type="date"],select {
   color: var(--secondary-color-black);
 }
 
-form input[type="number"]:focus ,input[type="date"]:focus, select:focus{
+form input:not(input[type="submit"]):focus, select:focus{
   outline: 1px solid var(--primary-color-yellow);
   border: 2px solid var(--primary-color-yellow);
+}
+
+.booking-confirmaton-section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-color-green);
+  margin: 2rem 0 4rem;
+}
+
+.bi-patch-check-fill {
+  font-size: 5rem;
+}
+
+.confirmation-card {
+  box-shadow: 1px 1px 13px 5px var(--primary-color-green);
+  border-radius: 10px;
+  padding: 3rem;
 }

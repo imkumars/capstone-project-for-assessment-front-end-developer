@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import React from "react";
 
 function SpecialMenuCard({imgSrc, dishName, dishPrice, dishdescription}){
     return (

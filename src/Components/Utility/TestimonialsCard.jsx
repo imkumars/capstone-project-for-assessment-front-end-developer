@@ -1,3 +1,5 @@
+import React from "react";
+
 // import StarImg from "../../assets/star-img.png";
 
 

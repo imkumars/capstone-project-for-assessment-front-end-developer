@@ -1,3 +1,5 @@
+import React from "react";
+
 import {Link} from "react-router-dom";
 import FooterImg from "../assets/logo-footer.png";
 import NavLinks from "./Utility/NavLinks";

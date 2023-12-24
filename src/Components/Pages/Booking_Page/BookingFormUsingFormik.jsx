@@ -9,7 +9,8 @@ import * as Yup from 'yup';
 const formStyles = {
     display: "grid",
     maxWidth: "200px",
-    gap: "20px"
+    gap: "20px",
+    margin: "0 auto"
 };
 
 
@@ -20,6 +21,8 @@ function BookingForm({availableTimes, dispatchMethod, submitFromFunction}){
     //form validation
 
     const initialValues = {
+        custName: "",
+        custEmail: "",
         resDate: "",
         resTime: availableTimes[0],
         numOfGuests: "1",
@@ -32,6 +35,12 @@ function BookingForm({availableTimes, dispatchMethod, submitFromFunction}){
     }
 
     const validationSchema = Yup.object({
+        custName: Yup.string()
+            .min(3, "Name need to be more than two letters")
+            .required("Enter your name"),
+        custEmail: Yup.string()
+            .email("Enter valid email id, so that we can send you confirmation email")
+            .required("Enter your valid email address"),
         resDate: Yup.string().required("Select date to reserve a table"),
         numOfGuests: Yup.number()
             .min(1, "Number of guests should not be less than 1")
@@ -68,6 +77,40 @@ function BookingForm({availableTimes, dispatchMethod, submitFromFunction}){
 
     return (
         <form style={formStyles} onSubmit={formik.handleSubmit} onChange={customOnChanageListener}>
+            <label htmlFor="cust-name">Enter your name</label>
+            <input
+                type="text"
+                id="cust-name"
+                name="custName"
+                value={formik.values.custName}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                aria-label="Enter your name"
+                aria-required= "true"
+                />
+
+            <span
+                className={(formik.errors.custName && formik.touched.custName) ? "form-error-msg" : "display-none" }
+                >{formik.errors.custName}
+            </span>
+
+            <label htmlFor="cust-email">Enter your email address</label>
+            <input
+                type="email"
+                id="cust-email"
+                name="custEmail"
+                value={formik.values.custEmail}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                aria-label="Please enter your valid email address"
+                aria-required= "true"
+                />
+
+            <span
+                className={(formik.errors.custEmail && formik.touched.custEmail) ? "form-error-msg" : "display-none" }
+                >{formik.errors.custEmail}
+            </span>
+
             <label htmlFor="res-date">Choose date</label>
             <input
                 type="date"

@@ -1,23 +1,20 @@
+import React from "react";
 
 import HeroImage from "../../../assets/restauranfood.jpg";
 import Button from "../../Utility/Button";
 
+import HeroSectionWrapper from "../../Utility/HeroSectionWrapper";
+
+
 function HeroSection(){
     return(
-        <div className="hero-section">
-            <div className="container">
-                <section>
-                    <h1 className="hero-display-title title-subtitle-font-family">Little Lemon</h1>
-                    <h3 className="hero-display-sub-title title-subtitle-font-family">Chicago</h3>
-                    <p className="hero-description">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-                    <Button linkTo="/reservations" btnName="Reserve a Table" styleClass="reserve-table-btn" />
+        <HeroSectionWrapper heroImgSrc={HeroImage} heroHeadingTxt="Little Lemon" heroSubHeadingTxt="Chicago" >
 
-                </section>
-                <figure className="hero-fig rounded-border-radius">
-                    <img src={HeroImage} alt="restaurant food" loading="lazy"/>
-                </figure>
-            </div>
-        </div>
+            <p className="hero-description">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+            <Button linkTo="/reservations" btnName="Reserve a Table" styleClass="reserve-table-btn" />
+
+        </HeroSectionWrapper>
+
     );
 }
 

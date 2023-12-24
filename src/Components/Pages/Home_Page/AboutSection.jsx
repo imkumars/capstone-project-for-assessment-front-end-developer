@@ -1,3 +1,4 @@
+import React from "react";
 
 import aboutRestaurantText from "../../../data/about-restaurant-data"
 import restaurantImg from "../../../assets/restaurant.jpg";
