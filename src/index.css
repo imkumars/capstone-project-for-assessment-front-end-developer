@@ -4,6 +4,18 @@
   padding: 0;
 }
 
+:root {
+  --heading-font-family: 'Markazi Text', serif;
+  --general-font-family: 'Karla', sans-serif;
+  --primary-color-green: #495e57;
+  --primary-color-yellow: #f4ce14;
+  --secondary-color-orange-dark: #ee9972;
+  --secondary-color-orange-light: #fbdabb;
+  --secondary-color-gray: #edefee;
+  --secondary-color-black: #333333;
+  --border-radius: 10px;
+}
+
 body {
   margin: 0;
   font-family: 'Karla', sans-serif;

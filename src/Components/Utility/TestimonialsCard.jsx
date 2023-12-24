@@ -15,7 +15,7 @@ function TestimonialsCard({custName, custReview, starRating, custImg}){
         <div className="testimonials-card">
             <section>
                 <figure>
-                    <img src={custImg} alt="customer-img"></img>
+                    <img src={custImg} alt="customer-img" loading="lazy"/>
                     {/* <i className="bi bi-person-fill"></i> */}
                 </figure>
                 <section>

@@ -13,8 +13,8 @@ function AboutSection(){
                     <p className="about-restaurant-text">{aboutRestaurantText}</p>
                 </section>
                 <figure>
-                    <img src={restaurantImg} alt="restaurant" />
-                    <img src={restaurantBImg} alt="restaurant-img-b" />
+                    <img src={restaurantImg} alt="restaurant" loading="lazy"/>
+                    <img src={restaurantBImg} alt="restaurant-img-b" loading="lazy"/>
                 </figure>
             </div>
         </section>

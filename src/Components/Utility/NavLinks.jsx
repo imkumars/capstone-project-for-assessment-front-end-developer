@@ -1,5 +1,5 @@
 
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const navLinksArray = [
     {
@@ -31,7 +31,7 @@ const navLinksArray = [
 function NavLinks(){
 
     const links = navLinksArray.map((link) => {
-        return <li key={link.name}><Link to={link.linkTo}>{link.name}</Link></li>
+        return <li key={link.name}><NavLink to={link.linkTo}>{link.name}</NavLink></li>
     });
 
     return(

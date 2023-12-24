@@ -9,7 +9,7 @@ font-family: 'Markazi Text', serif;
 
 */
 
-:root {
+/* :root {
   --heading-font-family: 'Markazi Text', serif;
   --general-font-family: 'Karla', sans-serif;
   --primary-color-green: #495e57;
@@ -19,7 +19,7 @@ font-family: 'Markazi Text', serif;
   --secondary-color-gray: #edefee;
   --secondary-color-black: #333333;
   --border-radius: 10px;
-}
+} */
 
 .title-subtitle-font-family {
   font-family: var(--heading-font-family);
@@ -68,6 +68,14 @@ font-family: 'Markazi Text', serif;
   width: 65vw;
 }
 
+/* /////////container media query/////////// */
+@media (width < 800px) {
+  .container {
+    width: 85vw;
+  }
+}
+
+
 /* General styles */
 header, main, footer {
   display: flex;
@@ -82,7 +90,7 @@ main {
 header > :first-child, footer > :first-child {
   padding: 2rem 0;
 
-  width: 65vw;
+  /* width: 65vw; */
 }
 
 nav a, footer a {
@@ -94,10 +102,20 @@ nav ul, footer ul {
 }
 
 /* Navbar-styles */
+
+nav .active {
+  border-bottom: 0.2rem solid var(--primary-color-green);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  /* flex-direction: column; */
 }
 
 nav ul {
@@ -112,9 +130,49 @@ nav a {
   font-weight: 800;
 }
 
-nav a:hover {
+nav a:not(.active):hover {
   border-bottom: 0.2rem solid var(--primary-color-yellow);
 }
+
+.navbar-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-mobile-button {
+  box-shadow: none;
+  padding: 0.2rem;
+  background-color: transparent;
+}
+
+
+/* /////////Navbar media query/////////// */
+
+@media (width < 800px ) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  nav ul {
+    grid-template-columns: 1fr;
+    width: 100%;
+
+    /*test nav icon function*/
+    display: none;
+  }
+
+  .show-menu + ul {
+    display: grid;
+  }
+
+}
+
+
+
 
 /* Hero section */
 
@@ -129,7 +187,10 @@ nav a:hover {
 
 .hero-section > div {
   display: grid;
-  grid-template-columns: 1fr max-content;
+  /* grid-template-columns: 1fr max-content; */
+
+  grid-template-columns: 1fr 40%;
+  column-gap: 1%;
 }
 
 .hero-section > div > section {
@@ -156,10 +217,14 @@ nav a:hover {
 }
 
 .hero-fig {
-  width: 18.7rem;
-  height: 21.8rem;
+  /* width: 18.7rem; */
+  /* height: 21.8rem; */
+  
   margin-bottom: -4rem;
   overflow: hidden;
+
+  aspect-ratio: 1;
+
 }
 
 .hero-fig img {
@@ -168,6 +233,22 @@ nav a:hover {
   object-fit: cover;
 
   /* vertical-align: bottom;    [to get rid of small spacing below image](https://stackoverflow.com/questions/12182617/html5-figure-margin-padding) */
+}
+
+/*///////Hero section media query//////////*/
+
+@media (width < 800px) {
+  .hero-description {
+    width: 100%;
+  }
+
+  .hero-fig {
+    margin-bottom: 0;
+  }
+
+  .hero-section > div {
+    align-items: center;
+  }
 }
 
 
@@ -179,19 +260,20 @@ nav a:hover {
   flex-direction: column;
   padding: 2rem 0;
 
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
 
 .menu-section section {
-  width: 65vw;
+  /* width: 65vw; */
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
 
   flex-wrap: wrap;
+  row-gap: 2rem;
 }
 
-.menu-section :first-child {
+.menu-section > :first-child {
   align-items: center;
 }
 
@@ -270,6 +352,22 @@ article[class="dish-name-price"] :nth-child(2) {
   margin-top: auto; /* trick to make last-child stick to bottom which is available with flexbox */
 }
 
+
+/*///////Special menu section media query//////////*/
+
+@media (width < 800px) {
+  .menu-section :first-child {
+    row-gap: 0;
+  }
+
+  .menu-section :nth-child(2) {
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+}
+
+
 /* Testimonials section */
 .testimonials-section {
   background-color: var(--primary-color-green);
@@ -295,11 +393,13 @@ article[class="dish-name-price"] :nth-child(2) {
 
 .testimonials-section > div > :last-child {
   display: flex;
-  /* column-gap: 2rem; */
+  column-gap: 2rem;
+  row-gap: 2rem;
 
   width: 100%;
   justify-content: space-between;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .testimonials-card {
@@ -359,6 +459,18 @@ article[class="dish-name-price"] :nth-child(2) {
   font-size: 0.6rem;
 }
 
+
+/*///////Testimonials section media query//////////*/
+
+@media (width < 800px) {
+  .testimonials-section > div > :last-child {
+    justify-content: center;
+  }
+}
+
+
+
+
 /* About section */
 
 .about-section {
@@ -409,6 +521,19 @@ article[class="dish-name-price"] :nth-child(2) {
   position: absolute;
   right: 0;
   margin-top: -2rem;
+}
+
+
+/*///////About section media query//////////*/
+
+@media (width < 800px) {
+  .about-section > div {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+  .about-section figure{
+    height: auto;
+  }
 }
 
 

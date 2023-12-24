@@ -1,9 +1,10 @@
+import { lazy } from "react";
 
 function SpecialMenuCard({imgSrc, dishName, dishPrice, dishdescription}){
     return (
         <div className="special-menu-card" >
             <figure>
-                <img src={imgSrc} alt={dishName}/>
+                <img src={imgSrc} alt={dishName} loading="lazy"/>
             </figure>
             <article>
                 <article className="dish-name-price">

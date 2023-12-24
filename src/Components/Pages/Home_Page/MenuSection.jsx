@@ -16,11 +16,11 @@ function MenuSection(){
 
     return (
         <div className="menu-section">
-            <section>
+            <section className="container">
                 <h1 className="title-subtitle-font-family">This weeks specials !</h1>
                 <Button linkTo="/menu" btnName="Online Menu" styleClass="online-menu-btn"/>
             </section>
-            <section>
+            <section className="container">
                 {specialMenus}
             </section>
         </div>

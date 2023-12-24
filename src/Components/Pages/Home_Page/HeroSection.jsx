@@ -14,7 +14,7 @@ function HeroSection(){
 
                 </section>
                 <figure className="hero-fig rounded-border-radius">
-                    <img src={HeroImage} alt="restaurant food" />
+                    <img src={HeroImage} alt="restaurant food" loading="lazy"/>
                 </figure>
             </div>
         </div>
