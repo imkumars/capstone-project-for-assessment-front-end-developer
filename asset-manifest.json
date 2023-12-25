@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/capstone-project-for-assessment-front-end-developer/static/css/main.0d06c709.css",
+    "main.js": "/capstone-project-for-assessment-front-end-developer/static/js/main.a685cb63.js",
+    "static/js/787.d4aba7ab.chunk.js": "/capstone-project-for-assessment-front-end-developer/static/js/787.d4aba7ab.chunk.js",
+    "static/media/Mario-and-Adrian-A.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/Mario-and-Adrian-A.7f44c6d6e341a27d14b3.jpg",
+    "static/media/restaurant-chef-B.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/restaurant-chef-B.4b4c2d26b514db32e8fc.jpg",
+    "static/media/greek-salad.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/greek-salad.bed423a1fab5b210e347.jpg",
+    "static/media/restauranfood.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/restauranfood.e8abf5b772b6817189aa.jpg",
+    "static/media/restaurant.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
+    "static/media/bruchetta.png": "/capstone-project-for-assessment-front-end-developer/static/media/bruchetta.5c7102fd0dd96de7d145.png",
+    "static/media/Rosa-img-original_creator_Ashwin-Vaswani_unsplash.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/Rosa-img-original_creator_Ashwin-Vaswani_unsplash.d800196f5af96e404563.jpg",
+    "static/media/Logo.svg": "/capstone-project-for-assessment-front-end-developer/static/media/Logo.f72c913c48c5334f78f2c336ec36f22b.svg",
+    "static/media/Keisha-img-original_creator_Judith-Ejike_unsplash.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/Keisha-img-original_creator_Judith-Ejike_unsplash.fd37b2898bde9d8efad3.jpg",
+    "static/media/Alex-img-original_creator_Amir-Seilsepour_unsplash.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/Alex-img-original_creator_Amir-Seilsepour_unsplash.07628e66c6f219950f51.jpg",
+    "static/media/Mei-img-original_creator_Imansyah-Muhamad-Putera_unsplash.jpg": "/capstone-project-for-assessment-front-end-developer/static/media/Mei-img-original_creator_Imansyah-Muhamad-Putera_unsplash.7cfe1f0c21b72e8f6746.jpg",
+    "index.html": "/capstone-project-for-assessment-front-end-developer/index.html",
+    "main.0d06c709.css.map": "/capstone-project-for-assessment-front-end-developer/static/css/main.0d06c709.css.map",
+    "main.a685cb63.js.map": "/capstone-project-for-assessment-front-end-developer/static/js/main.a685cb63.js.map",
+    "787.d4aba7ab.chunk.js.map": "/capstone-project-for-assessment-front-end-developer/static/js/787.d4aba7ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d06c709.css",
+    "static/js/main.a685cb63.js"
+  ]
+}
